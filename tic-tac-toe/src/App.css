@@ -1,0 +1,170 @@
+body{
+  width: 100%;
+  height: 100%;
+}
+
+.background {
+  width: 100%;
+  height: 1000px;
+  background: radial-gradient(olive 10%, green 25%, olive 80%);display: flex;
+  justify-content: center;
+}
+
+.grid {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background: transparent;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  animation: grow 5s infinite linear;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.05)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+.grid:hover {
+  animation-play-state: paused;
+}
+
+.game-cell {
+  width: 120px;
+  height: 120px;
+  box-shadow: 5px 5px 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  animation: shadow 5s infinite linear;
+}
+
+.game-cell.shadowAnimStop{
+  animation-play-state: paused;
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 5px 5px 5px;
+  }
+
+  50% {
+    box-shadow: 10px 10px 5px;
+  }
+
+  100% {
+    box-shadow: 5px 5px 5px;
+  }
+}
+
+.one {
+  background-color: blueviolet;
+}
+
+.two {
+  background-color: #476930;
+  font-size: 20px;
+  text-wrap: balance;
+}
+
+.three {
+  background-color: #596E5C;
+  opacity: 0.7;
+  font-size: 20px;
+  text-wrap: balance;
+}
+
+.three:hover {
+  opacity: 0.9;
+}
+
+.four {
+  background-color: #86B049;
+  opacity: 0.7;
+  font-size: 20px;
+  text-wrap: balance;
+}
+
+.four:hover {
+  opacity: 0.9;
+}
+
+.clicked {
+  background-color: #FFFFFF;
+  opacity: 1;
+  font-size: 20px;
+  text-wrap: balance;
+}
+
+.button {
+  margin-top: 80px;
+  height: 40px;
+  width: auto;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 17px;
+  border: 1px dashed; 
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+.input1 {
+  position: absolute;
+  left: 120px;
+  top: 140px;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px;
+  padding-left: 15px;
+}
+
+.guessList{
+  position: absolute;
+  top: 200px;
+  left: 120px;
+  background-color: beige;
+  width: 200px;
+  height: 510px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px;
+  color: black;
+  font-size: 25px;
+  overflow: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.item {
+  font-size: 16px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.item:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
