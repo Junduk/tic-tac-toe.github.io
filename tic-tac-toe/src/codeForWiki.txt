@@ -1,91 +1,67 @@
-//console.log
-for(let i = 2; i <= 70; i++){
-    try{
-        console.log('{"title": "%s", "artists": "Eminem"},',inputs[1].getElementsByTagName('tr')[i].getElementsByTagName('th')[0].innerText);
-    } catch {
-        break;
-    }
-}
-
-
-
-//if there's no query inspect if a table has two row of elements not necessary for print and set for loop to two
-
-//push into a list
 let list1 = [];
 let list2 = [];
 let list3 = [];
-let name;
-let name2;
-let d;
-let for1 = document.querySelectorAll('tbody')[6].getElementsByTagName('tr')[1].getElementsByTagName('th')[0].innerText.replace(/"/g, '').split("\n")[0] == 'US' || 'CAN' ? 2 : 1;
-for(let i = for1; i <= 70; i++){
+let singer = "Pitbull";
+let featureList = [];
+let for1 = document.querySelectorAll('tbody')[7].getElementsByTagName('tr')[1].getElementsByTagName('th')[0].innerText.replace(/"/g, '').split("\n")[0] == 'US' || 'CAN' ? 2 : 1;
+for(let i = for1; i <= 200; i++){
     try{
-        name = "Beyonce";
-        name2 = "Beyonce";
-        let n1 = name.split(" ")[0];
-        let n2 = name.split(" ")[1];
-        d = [];
-        let c = document.querySelectorAll('tbody')[6].getElementsByTagName('tr')[i].getElementsByTagName('th')[0].innerText.replace(/"/g, '').split("\n");
-        let c1;
-        if(c[1] != undefined){
-            name = name + ",";
-            c1 = c[1].substring(1, c[1].length - 1).split(' ');
-            for(let i = 0; i < c1.length; i++){
-                if(c1[i].length == 1 || (c1[i].toLowerCase() != 'feature' && c1[i].toLowerCase() != 'featuring' && c1[i].toLowerCase() != 'solo' && c1[i].toLowerCase() != 'with' && c1[1].toLowerCase() != n1 && c1[1].toLowerCase() != n2 && !name2.toLowerCase().includes(c1[i].toLowerCase()))){
-                    d.push(" " + c1[i]);
-                }
-            }
-        }
-        list1.push(`{"title": "${c[0]}", "artists": "${name}${d}"},`);
-    } catch {
-        break;
-    }
-}
-let for2 = document.querySelectorAll('tbody')[7].getElementsByTagName('tr')[1].getElementsByTagName('th')[0].innerText.replace(/"/g, '').split("\n")[0] == 'US' || 'CAN' ? 2 : 1;
-for(let i = for2; i <= 70; i++){
-    try{
-        name = "Beyonce";
-        name2 = "Beyonce";
-        let n1 = name.split(" ")[0];
-        let n2 = name.split(" ")[1];
-        d = [];
+        featureList = [singer];
+        let n1 = singer.split(" ")[0];
+        let n2 = singer.split(" ")[1];
         let c = document.querySelectorAll('tbody')[7].getElementsByTagName('tr')[i].getElementsByTagName('th')[0].innerText.replace(/"/g, '').split("\n");
         let c1;
         if(c[1] != undefined){
-            name = name + ",";
             c1 = c[1].substring(1, c[1].length - 1).split(' ');
             for(let i = 0; i < c1.length; i++){
-                if(c1[i].length == 1 || (c1[i].toLowerCase() != 'feature' && c1[i].toLowerCase() != 'featuring' && c1[i].toLowerCase() != 'solo' && c1[i].toLowerCase() != 'with' && c1[1].toLowerCase() != n1 && c1[1].toLowerCase() != n2 && !name2.toLowerCase().includes(c1[i].toLowerCase()))){
-                    d.push(" " + c1[i]);
+                if(c1[i].length == 1 || (c1[i].toLowerCase() != 'feature' && c1[i].toLowerCase() != 'featuring' && c1[i].toLowerCase() != 'solo' && c1[i].toLowerCase() != 'with' && c1[1].toLowerCase() != n1 && c1[1].toLowerCase() != n2 && !singer.toLowerCase().includes(c1[i].toLowerCase()))){
+                    featureList.push(c1[i]);
                 }
             }
         }
-        list2.push(`{"title": "${c[0]}", "artists": "${name}${d}"},`);
+        list1.push({"title": c[0], "artists": featureList});
     } catch {
         break;
     }
 }
-let for3 = document.querySelectorAll('tbody')[8].getElementsByTagName('tr')[1].getElementsByTagName('th')[0].innerText.replace(/"/g, '').split("\n")[0] == 'US' || 'CAN' ? 2 : 1;
-for(let i = for3; i <= 70; i++){
+let for2 = document.querySelectorAll('tbody')[8].getElementsByTagName('tr')[1].getElementsByTagName('th')[0].innerText.replace(/"/g, '').split("\n")[0] == 'US' || 'CAN' ? 2 : 1;
+for(let i = for2; i <= 200; i++){
     try{
-        name = "Beyonce";
-        name2 = "Beyonce";
-        let n1 = name.split(" ")[0];
-        let n2 = name.split(" ")[1];
-        d = [];
+        featureList = [singer];
+        let n1 = singer.split(" ")[0];
+        let n2 = singer.split(" ")[1];
         let c = document.querySelectorAll('tbody')[8].getElementsByTagName('tr')[i].getElementsByTagName('th')[0].innerText.replace(/"/g, '').split("\n");
         let c1;
         if(c[1] != undefined){
-            name = name + ",";
             c1 = c[1].substring(1, c[1].length - 1).split(' ');
             for(let i = 0; i < c1.length; i++){
-                if(c1[i].length == 1 || (c1[i].toLowerCase() != 'feature' && c1[i].toLowerCase() != 'featuring' && c1[i].toLowerCase() != 'solo' && c1[i].toLowerCase() != 'with' && c1[1].toLowerCase() != n1 && c1[1].toLowerCase() != n2 && !name2.toLowerCase().includes(c1[i].toLowerCase()))){
-                    d.push(" " + c1[i]);
+                if(c1[i].length == 1 || (c1[i].toLowerCase() != 'feature' && c1[i].toLowerCase() != 'featuring' && c1[i].toLowerCase() != 'solo' && c1[i].toLowerCase() != 'with' && c1[1].toLowerCase() != n1 && c1[1].toLowerCase() != n2 && !singer.toLowerCase().includes(c1[i].toLowerCase()))){
+                    featureList.push(c1[i]);
                 }
             }
         }
-        list3.push(`{"title": "${c[0]}", "artists": "${name}${d}"},`);
+        list2.push({"title": c[0], "artists": featureList});
+    } catch {
+        break;
+    }
+}
+let for3 = document.querySelectorAll('tbody')[9].getElementsByTagName('tr')[1].getElementsByTagName('th')[0].innerText.replace(/"/g, '').split("\n")[0] == 'US' || 'CAN' ? 2 : 1;
+for(let i = for3; i <= 200; i++){
+    try{
+        featureList = [singer];
+        let n1 = singer.split(" ")[0];
+        let n2 = singer.split(" ")[1];
+        let c = document.querySelectorAll('tbody')[9].getElementsByTagName('tr')[i].getElementsByTagName('th')[0].innerText.replace(/"/g, '').split("\n");
+        let c1;
+        if(c[1] != undefined){
+            c1 = c[1].substring(1, c[1].length - 1).split(' ');
+            for(let i = 0; i < c1.length; i++){
+                if(c1[i].length == 1 || (c1[i].toLowerCase() != 'feature' && c1[i].toLowerCase() != 'featuring' && c1[i].toLowerCase() != 'solo' && c1[i].toLowerCase() != 'with' && c1[1].toLowerCase() != n1 && c1[1].toLowerCase() != n2 && !singer.toLowerCase().includes(c1[i].toLowerCase()))){
+                    featureList.push(c1[i]);
+                }
+            }
+        }
+        list3.push({"title": c[0], "artists": featureList});
     } catch {
         break;
     }
@@ -94,27 +70,44 @@ console.log(list1);
 console.log(list2);
 console.log(list3);
 
-
-
-
-for(let i = 2; i <= 60; i++){
-    let splits = inputs[1].getElementsByTagName('tr')[i].getElementsByTagName('th')[0].innerText.split('"')
-    list1.push(splits[1])   
-    list2.push(splits[2])
+//use this in a separate compiler to format everything
+console.log(`//${singer} as lead artist`);
+for(let i of list1){
+    let arts = '';
+    for(let j in i.artists){
+        if(j == 0){
+            arts += `"${i.artists[j]}"`;
+        } else {
+            arts += `, "${i.artists[j]}"`;
+        }
+    }
+    console.log(`{ title: "${i.title}", artists: [${arts}] },`);
+}
+console.log(`//${singer} as featured artist`);
+for(let i of list2){
+    let arts = '';
+    for(let j in i.artists){
+        if(j == 0){
+            arts += `"${i.artists[j]}"`;
+        } else {
+            arts += `, "${i.artists[j]}"`;
+        }
+    }
+    console.log(`{ title: "${i.title}", artists: [${arts}] },`);
+}
+console.log(`//Promotional singles`);
+for(let i of list3){
+    let arts = '';
+    for(let j in i.artists){
+        if(j == 0){
+            arts += `"${i.artists[j]}"`;
+        } else {
+            arts += `, "${i.artists[j]}"`;
+        }
+    }
+    console.log(`{ title: "${i.title}", artists: [${arts}] },`);
 }
 
-
-
-//annotation
-
-/*
-
-document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode != 114) {
-        alert(evt.keyCode);
-        console.log('hey');
-    }
-};
-
-*/
+//try genius api with eminem 
+//artists/45/songs?page=1&per_page=20&sort=popularity
+//change per_page 

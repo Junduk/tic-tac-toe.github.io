@@ -90,7 +90,7 @@ body{
 .three {
   background-color: #596E5C;
   opacity: 0.7;
-  font-size: 20px;
+  font-size: 40px;
   text-wrap: balance;
 }
 
@@ -101,7 +101,7 @@ body{
 .four {
   background-color: #86B049;
   opacity: 0.7;
-  font-size: 20px;
+  font-size: 40px;
   text-wrap: balance;
 }
 
@@ -112,7 +112,7 @@ body{
 .clicked {
   background-color: #FFFFFF;
   opacity: 1;
-  font-size: 20px;
+  font-size: 40px;
   text-wrap: balance;
 }
 
@@ -167,4 +167,10 @@ body{
 .item:hover {
   background-color: lightgray;
   cursor: pointer;
+}
+
+.player {
+  font-size: 20px;
+  font-style: bold;
+  font-family: 'Times New Roman';
 }
