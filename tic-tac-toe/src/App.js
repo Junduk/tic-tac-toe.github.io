@@ -144,7 +144,7 @@ const App = () => {
         url: `https://api.genius.com/artists/${artistID}/songs?page=${page}&per_page=${perPage}&sort=${sort}`,
         method: 'GET',
         headers: {
-          Authorization: 'Bearer XOVL98GMSxw2zns59OXCTuoY6P6cMVwwHTgTNyoec5H1URQXczOUT6Ek1XdGfkAu'
+          Authorization: ''
         }
       })
     })
@@ -203,7 +203,7 @@ const App = () => {
         url: `https://api.genius.com/artists/${artistID}`,
         method: 'GET',
         headers: {
-          Authorization: 'Bearer XOVL98GMSxw2zns59OXCTuoY6P6cMVwwHTgTNyoec5H1URQXczOUT6Ek1XdGfkAu'
+          Authorization: ''
         }
       })
     })
